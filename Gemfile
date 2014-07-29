@@ -9,7 +9,6 @@ group :development do
 	gem 'sqlite3'
 end
 
-
 # Use these in production
 group :production do
 	gem 'pg'
