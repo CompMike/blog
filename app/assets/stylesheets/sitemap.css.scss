@@ -20,35 +20,45 @@
 	background-color: #00aeef;
 }
 .line {
-	width: 1px;
+	width: 70px;
+	height: 1px;
 	background-color: #444;
+	position: absolute;
+	&.one {
+		left: 184px;
+		top: 67px;
+		transform:rotate(-52deg);
+	}
+	&.two {
+		right: 180px;
+		top: 67px;
+		transform:rotate(52deg);
+	}
 }
 
 .welcome-top {
-		position: absolute;
-		left: 50%;
-		top: 0;
-		a {
-
-		}
+	position: absolute;
+	left: 50%;
+	top: 0;
 	.circle {
 		position: relative;
+		margin: .25em auto;
 		left: -50%;
 	}
 }
 .sitemap-left {
-		position: absolute;
-		left: 30%;
-		top: 100px;
-		a {
-
-		}
+	position: absolute;
+	left: 190px;
+	top: 100px;
+	.circle {
+		margin-bottom: 10px;
+	}
 }
 .sitemap-right {
-		position: absolute;
-		left: 60%;
-		top: 100px;
-		a {
-
-		}
+	position: absolute;
+	left: 300px;
+	top: 100px;
+	.circle {
+		margin-bottom: 10px;
+	}
 }
