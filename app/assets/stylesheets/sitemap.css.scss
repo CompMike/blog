@@ -1,3 +1,54 @@
 // Place all the styles related to the sitemap controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.sitemap {
+	position: relative;
+	margin-top: 2em;
+	a {
+		position: relative;
+		left: -50%;
+	}
+	&:hover ~ .circle {
+		background-color: red;
+	}
+}
+.circle {
+	width: 15px;
+	height: 15px;
+	border-radius: 100%;
+	background-color: #00aeef;
+}
+.line {
+	width: 1px;
+	background-color: #444;
+}
+
+.welcome-top {
+		position: absolute;
+		left: 50%;
+		top: 0;
+		a {
+
+		}
+	.circle {
+		position: relative;
+		left: -50%;
+	}
+}
+.sitemap-left {
+		position: absolute;
+		left: 30%;
+		top: 100px;
+		a {
+
+		}
+}
+.sitemap-right {
+		position: absolute;
+		left: 60%;
+		top: 100px;
+		a {
+
+		}
+}

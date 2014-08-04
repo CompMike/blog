@@ -9,15 +9,11 @@
  * compiled file so the styles you add here take precedence over styles defined in any styles
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
- *
- *= require_tree .
- *= require_self
+ 	*= require '_reset'
+ 	*= require_self
+ 	*= require_tree .
  */
 
- /* http://meyerweb.com/eric/tools/css/reset/
-   v2.0 | 20110126
-   License: none (public domain)
-*/
 
 $dark-color: #171d25;
 $site-blue: #00aeef;
@@ -25,47 +21,91 @@ $site-red: #e55346;
 $site-red2: #c3333c;
 
 /*----- Includes ----- */
-@import "_reset";
-@import url(http://fonts.googleapis.com/css?family=Josefin+Sans:400,600,700);
+@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
 
 /*----- Beginning my styles -----*/
+
+/* apply a natural box layout model to all elements */
+*, *:before, *:after {
+  -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+ }
+html, body {
+	height: 100%;
+}
 body {
 	background-color: $dark-color;
 	color: #ccc;
-	font-family: 'Josefin Sans', sans-serif;
+	font-family: 'Montserrat', sans-serif;
 	padding-top: 100px;
 	margin: 0 auto;
-	width: 700px;
+	width: 800px;
 	font-size: 16px;
 }
 a:link,a:hover,a:active,a:visited {
 	color: $site-blue;
-	text-decoration: underline;
+	text-decoration: none;
 }
 a:hover {
 	color: $site-red;
+	text-decoration: underline;
+}
+header {
+	margin-bottom: 3em;
+}
+.logo {
+	width: 400px;
+	font-size: 1.5em;
+	color: $site-red;
+}
+.sidebar {
+	width: 20%;
+	float: left;
+	padding-right: 2em;
+}
+nav {
+	font-size: 24px;
+	li {
+		margin-bottom: .5em;
+		position: relative;
+		&:after::hover {
+			content: "-";
+			right: 0;
+			top: 0;
+		}
+	}
 }
 
+.content {
+	width: 70%;
+	height: 100%;
+	float: left;
+	border-left: 1px solid #444;
+}
+.page-header {
+	width: 100%;
+}
+.page-content {
+	padding: 0 2em;
+}
+.line-break {
+	margin-bottom: 2em;
+}
+footer {
+	clear: both;
+}
 h1 {
-	font-size: 3em;
+	font-size: 2em;
 	font-weight: bold;
 	color: $site-blue;
+	text-align: center;
 }
 blockquote {
 	font-style: italic;
-	font-family: cursive;
 }
 p {
 	margin: 1em 0;
 }
-figure {
 
-}
-img {
-	display: block;
-	margin-right: 20px;
-	border: 5px solid $site-red;
-}
 figcaption {
 	text-align: left;
 	padding-top: 5px;
