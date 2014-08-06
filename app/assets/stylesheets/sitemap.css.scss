@@ -27,11 +27,13 @@
 	&.one {
 		left: 184px;
 		top: 67px;
+		-webkit-transform: rotate(-58deg);
 		transform:rotate(-58deg);
 	}
 	&.two {
 		right: 180px;
 		top: 67px;
+		-webkit-transform: rotate(52deg);
 		transform:rotate(52deg);
 	}
 }
