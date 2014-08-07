@@ -1,0 +1,13 @@
+<div class="content">
+	<div class="page-content">
+		<% 1.upto(100).each do |n| %>
+			<img src="http://i1.trekearth.com/photos/4435/north_sea_storm.jpg" style="width:<%= n %>px !important; height: auto;">
+		<% end %>
+		<% image_urls = ['http://i1.trekearth.com/photos/4435/north_sea_storm.jpg','http://thehenrybrothers.files.wordpress.com/2012/01/the_sea.jpg','http://www.richardhellergallery.com/dynamic/images/detail/Corey_Arnold_The_North_Sea_2011_1927_412.jpg'] %>
+		<% image_urls.each do |image_url| %>
+			<a href="<%= image_url %>" target="_blank">
+				<img src="<%= image_url %>" alt="">
+			</a>
+		<% end %>
+	</div>
+</div>

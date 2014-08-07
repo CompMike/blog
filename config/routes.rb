@@ -1,8 +1,11 @@
 Rails.application.routes.draw do
   get 'sitemap/index' => 'sitemap#index'
+  get 'sitemap' => 'sitemap#index'
   get 'welcome' => 'welcome#index'
   get 'welcome/index' => 'welcome#index'
-  get 'about/index'
+  get 'about' => 'about#index'
+  get 'about/pics' => 'about#pics'
+  get 'pics' => 'about#pics'
 
 
   # The priority is based upon order of creation: first created -> highest priority.
