@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'random/index'
+
   get 'sitemap/index' => 'sitemap#index'
   get 'sitemap' => 'sitemap#index'
   get 'welcome' => 'welcome#index'
@@ -6,6 +8,10 @@ Rails.application.routes.draw do
   get 'about' => 'about#index'
   get 'about/pics' => 'about#pics'
   get 'pics' => 'about#pics'
+  get 'random' => 'random#index'
+  get 'matchgame' => 'random#matchgame'
+   get 'matchgamequestion' => 'random#matchgame-question'
+  post 'set_name' => 'welcome#set_name'
 
 
   # The priority is based upon order of creation: first created -> highest priority.

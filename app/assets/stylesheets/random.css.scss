@@ -1,0 +1,148 @@
+// Place all the styles related to the random controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.matchgame {
+	 div.cards {
+		width: 30%;
+		height: 200px;
+		text-align: center;
+		float: left;
+		margin: 0 10px 10px 0;
+		border-radius: 5px;
+		cursor: pointer;
+		color: black;
+	}
+//Refresh Page Button
+a.refreshpage {
+	width: 100%;
+	border-radius: 5px;
+	display: block;
+	clear: both;
+	background-color: #00aeef;
+	padding: 15px;
+	text-decoration: none;
+	text-align: center;
+	color: black;
+	&:visited,&:link,&:active{
+		color: black;
+	}
+	&:hover {
+		color: white;
+		background-color: #e55346;
+	}
+	&.firstpage {
+		width: 465px;
+		margin-bottom: 15px;
+	}
+}
+//Pretty Title
+	h3 {
+		text-align: center;
+	}
+	h1.title {
+		font-size: 3em;
+		span:nth-child(1) {
+			color: #3D8099;
+		}
+		span:nth-child(2) {
+			color: #00FFB9;
+		}
+		span:nth-child(3) {
+			color: #FF5040;
+		}
+		span:nth-child(4) {
+			color: #CC143C;
+		}
+		span:nth-child(5) {
+			color: #F2C94E;
+		}
+		span:nth-child(6) {
+			color: #11644D;
+		}
+		span:nth-child(7) {
+			color: #CE0CE8;
+		}
+		span:nth-child(8) {
+			color: #B1CC14;
+		}
+		span:nth-child(9) {
+			color: #99453D;
+		}
+
+	}
+	.pig {
+	background: url(pig.svg) #3D8099 50% 50% no-repeat;
+	}
+	.surfboard {
+	background: url(surfboard.svg) #00FFB9 50% 50% no-repeat;
+	}
+	.diamond {
+	background: url(diamond.svg) #FF5040 50% 50% no-repeat;
+	}
+	.rain {
+	background: url(rain.svg) #CC143C 50% 50% no-repeat;
+	}
+	.car {
+	background: url(car.svg) #F2C94E 50% 50% no-repeat;
+	}
+	.dog {
+	background: url(dog.svg) #11644D 50% 50% no-repeat;
+	}
+	.boat {
+	background: url(boat.svg) #CE0CE8 50% 50% no-repeat;
+	}
+	.rainbow {
+	background: url(rainbow.svg) #B1CC14 50% 50% no-repeat;
+	}
+	.bigfoot {
+	background: url(bigfoot.svg) #99453D 50% 50% no-repeat;
+	}
+
+}
+//Question Page
+.board {
+	width: 50%;
+	margin: 1em 1em 0 0;
+	float: left;
+	border-radius: 5px;
+	position: relative;
+	input {
+		display: none;
+	}
+	label {
+		display: block;
+		float: left;
+		width: 27%;
+		height: 100px;
+		background-color: #00aeef;
+		margin: 0 15px 15px 0;
+		cursor: pointer;
+		color: black;
+		border-radius: 5px;
+		text-align: center;
+		vertical-align: middle;
+		font-size: 2em;
+		line-height: 100px;
+		.chosen {
+			background: url(dog.svg) #e55346 50% 50% no-repeat;
+		}
+	}
+	input[type=radio]:checked + label {
+		background-color: #e55346;
+		color: white;
+	}
+
+}
+.board-card {
+	border-radius: 5px;
+	margin-top: 1em;
+	width: 45%;
+	height: 330px;
+	float: left;
+}
+//Change height and width of cards for questions page
+.matchgame.question .cards {
+	width: 100%;
+	height: 330px;
+}

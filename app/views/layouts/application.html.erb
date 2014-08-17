@@ -11,6 +11,9 @@
 <%= yield %>
 <footer class="clear">
 	&copy; 2014 Michael Heard <%= @first_visit %>
+	<% if @user_name != nil %>
+		<p>Hello <%= @user_name.capitalize %> </p>
+	<% end %>
 </footer>
 </body>
 </html>
