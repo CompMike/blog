@@ -4,6 +4,7 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   before_action :add_cookie
   before_action :set_user_name
+  before_action :set_background
   def add_cookie
   	#get the current date and time
   	#create a string version of date and time
@@ -18,5 +19,8 @@ class ApplicationController < ActionController::Base
   def set_user_name
   	@user_name = session['user_name']
   end
-
+  def set_background
+  	session["color"] = params["color"]
+  	@backgroundcolor = session[""]
+  end
 end

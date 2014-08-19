@@ -9,9 +9,11 @@ Rails.application.routes.draw do
   get 'about/pics' => 'about#pics'
   get 'pics' => 'about#pics'
   get 'random' => 'random#index'
+  get 'matchgamehome' => 'random#matchgamehome'
   get 'matchgame' => 'random#matchgame'
-   get 'matchgamequestion' => 'random#matchgame-question'
+  get 'background' => 'random#background'
   post 'set_name' => 'welcome#set_name'
+  post 'matchgame' => 'random#matchgame'
 
 
   # The priority is based upon order of creation: first created -> highest priority.

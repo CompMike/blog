@@ -1,19 +1,39 @@
 <div class="content">
-	<div class="page-content matchgame firstpage">
-	<h3>Welcome to the</h3>
+	<div class="page-content matchgame question">
 	<h1 class="title">
 		<span>M</span><span>a</span><span>t</span><span>c</span><span>h</span><span>G</span><span>a</span><span>m</span><span>e</span>
 	</h1>
-	<p>Memorize the order of cards on this page. Click the button below to begin.</p>
-	<a class="refreshpage firstpage" href="javascript:history.go(0)">Let's Go! &rarr;</a>
-	<div class="cards pig"></div>
-	<div class="cards surfboard"></div>
-	<div class="cards rain"></div>
-	<div class="cards diamond"></div>
-	<div class="cards car"></div>
-	<div class="cards dog"></div>
-	<div class="cards boat"></div>
-	<div class="cards rainbow"></div>
-	<div class="cards bigfoot"></div>
+	<h3>Select where the card appeared on the board.</h3>
+		<form action="/matchgame" method="POST">
+			<div class="board">
+				<input type="radio" name="choice" value="[1,1]" id="choice1">
+				<label for="choice1">1</label>
+				<input type="radio" name="choice" value="[1,2]" id="choice2">
+				<label for="choice2">2</label>
+				<input type="radio" name="choice" value="[1,3]" id="choice3">
+				<label for="choice3">3</label>
+				<input type="radio" name="choice" value="[2,1]" id="choice4">
+				<label for="choice4">4</label>
+				<input type="radio" name="choice" value="[2,2]" id="choice5">
+				<label for="choice5">5</label>
+				<input type="radio" name="choice" value="[2,3]" id="choice6">
+				<label for="choice6">6</label>
+				<input type="radio" name="choice" value="[3,1]" id="choice7">
+				<label for="choice7">7</label>
+				<input type="radio" name="choice" value="[3,2]" id="choice8">
+				<label for="choice8">8</label>
+				<input type="radio" name="choice" value="[3,3]" id="choice9">
+				<label for="choice9">9</label>
+			</div>
+			<div class="board-card">
+				<div class="cards <%= @current_card %>"></div>
+			</div>
+			<div class="tally">
+				Your Score: <%= @score %>
+			</div>
+			<input type="submit" value="Next Card →">
+			<input type="hidden" name="authenticity_token" value="<%=form_authenticity_token %>">
+		</form>
+		<%= session.inspect %>
 	</div>
 </div>
