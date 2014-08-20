@@ -43,7 +43,6 @@ class RandomController < ApplicationController
   		session["matchgame_count"] = 0
   	end
   	#add one to the count on refresh
-  	session["matchgame_count"] +=1
   	#set the user's choice to the card selected
   	user_choice = params["choice"]
   	previous_card = card_answers[cards[session["matchgame_count"]-1]]
@@ -55,7 +54,8 @@ class RandomController < ApplicationController
  		end
   	#reset the game after all parts are played
   	@current_card = cards[session["matchgame_count"]]
-  	if session["matchgame_count"] >= 9
+  	session["matchgame_count"] +=1
+  	if session["matchgame_count"] >= 10
   		session["matchgame_count"] = 0
   		session["user_score"] = 0
   	end
