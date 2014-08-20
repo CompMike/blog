@@ -4,6 +4,9 @@
 		<span>M</span><span>a</span><span>t</span><span>c</span><span>h</span><span>G</span><span>a</span><span>m</span><span>e</span>
 	</h1>
 	<h3>Select where the card appeared on the board.</h3>
+			<div class="tally">
+				Your Score: <%= @score %>
+			</div>
 		<form action="/matchgame" method="POST">
 			<div class="board">
 				<input type="radio" name="choice" value="[1,1]" id="choice1">
@@ -28,12 +31,9 @@
 			<div class="board-card">
 				<div class="cards <%= @current_card %>"></div>
 			</div>
-			<div class="tally">
-				Your Score: <%= @score %>
-			</div>
 			<input type="submit" value="Next Card →">
 			<input type="hidden" name="authenticity_token" value="<%=form_authenticity_token %>">
 		</form>
-		<%= session.inspect %>
+		<% session.inspect %>
 	</div>
 </div>

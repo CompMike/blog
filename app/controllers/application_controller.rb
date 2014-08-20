@@ -21,6 +21,6 @@ class ApplicationController < ActionController::Base
   end
   def set_background
   	session["color"] = params["color"]
-  	@backgroundcolor = session[""]
+  	@backgroundcolor = session["color"]
   end
 end
