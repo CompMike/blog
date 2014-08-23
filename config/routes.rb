@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   get 'matchgamehome' => 'random#matchgamehome'
   get 'matchgame' => 'random#matchgame'
   get 'background' => 'random#background'
+  get 'portfolio' => 'about#portfolio'
   post 'set_name' => 'welcome#set_name'
   post 'matchgame' => 'random#matchgame'
 
