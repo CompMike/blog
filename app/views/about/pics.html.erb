@@ -1,10 +1,10 @@
 <div class="content">
 	<div class="page-content">
 	<%= image_tag("line-break2.svg", :alt => "about me", :class => "line-break") %>
-		<% @image_data.each do |description,image_url_link| %>
-			<a href="<%= image_url_link[1] %>" target="_blank">
-			<%= image_tag(image_url_link[0]) %>
-				<p><%= description %></p>
+		<% @image_data.each do |image| %>
+			<a href="<%= image.url %>" target="_blank">
+			<%= image_tag(image.url) %>
+				<p><%= image.description %></p>
 			</a>
 		<% end %>
 	</div>
