@@ -1,9 +1,11 @@
 <div class="content">
 	<div class="page-content">
-		<form action="/set_background">
+	<h1>Pick any color to change the background color.</h1>
+	<%= @backgroundcolor %>
+		<form action="/background">
 			<label for="">Set the background as Hex colors</label>
 			<input type="text" id="color" name="color">
-			<input type="submit">
+			<input type="submit" value="Set Background Color">
 		</form>
 	</div>
 </div>

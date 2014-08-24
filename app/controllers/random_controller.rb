@@ -16,7 +16,6 @@ class RandomController < ApplicationController
   		@output = "done"
   	end
   	session["count"] +=1
-
   end
   def matchgamehome
 
@@ -62,5 +61,10 @@ class RandomController < ApplicationController
   	@score = session["user_score"]
   	#Show the next page and ask the user to select a position, save that position.
   	#On the next refresh repeat this until all nine cards are guessed. While loop?
+  end
+  ### Background color changer.
+  def set_background
+  	session["color"] = params["color"]
+  	@backgroundcolor = session["color"]
   end
 end
