@@ -6,7 +6,13 @@ class AboutController < ApplicationController
   	@image_data = Pics.all
   end
   def portfolio
-  	@projects = Project.all
+  	chosen_category = params['category']
+  	if chosen_category == "all"
+  		@projects = Project.all
+  	else
+  		@projects = Project.where(category: chosen_category).all
+  	end
+
   end
 
 end
