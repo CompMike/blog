@@ -1,6 +1,14 @@
 <div class="content">
 	<div class="page-content">
 	<%= image_tag("line-break2.svg", :alt => "about me", :class => "line-break") %>
+	<h3>Categories:</h3>
+	<form action="/pics" method="POST" class="category_block">
+		<% @categories.each do |category| %>
+			<button class="category_button" name="category" value="<%= category %>"><%= category.capitalize %></button>
+		<% end %>
+		<button class="category_button" name="category" value="all">All</button>
+		<input type="hidden" name="authenticity_token" value="<%=form_authenticity_token %>">
+	</form>
 		<% @image_data.each do |image| %>
 			<a href="/assets/<%= image.url %>" target="_blank">
 			<%= image_tag(image.url) %>

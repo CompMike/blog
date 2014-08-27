@@ -16,6 +16,8 @@ Rails.application.routes.draw do
   post 'set_name' => 'welcome#set_name'
   post 'matchgame' => 'random#matchgame'
   post 'set_background' => 'random_#background'
+  post 'portfolio' => 'about#portfolio'
+  post 'pics' => 'about#pics'
 
 
   # The priority is based upon order of creation: first created -> highest priority.

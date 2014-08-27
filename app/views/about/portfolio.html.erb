@@ -1,9 +1,12 @@
 <div class="content">
 	<div class="page-content">
-	<form action="/portfolio" method="GET">
-		<button class="category_button" name="category" value="rails">Rails</button>
-		<button class="category_button" name="category" value="ruby">Ruby</button>
+		<%= image_tag("line-break2.svg", :alt => "about me", :class => "line-break") %>
+	<form action="/portfolio" method="POST" class="category_block">
+		<% @categories.each do |category| %>
+			<button class="category_button" name="category" value="<%= category %>"><%= category.capitalize %></button>
+		<% end %>
 		<button class="category_button" name="category" value="all">All</button>
+		<input type="hidden" name="authenticity_token" value="<%=form_authenticity_token %>">
 	</form>
 	<% @projects.each do |project| %>
 			<ul>
